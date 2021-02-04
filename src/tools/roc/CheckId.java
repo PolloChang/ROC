@@ -38,6 +38,9 @@ public class CheckId {
         if(inputIdno.length()!=10){
             return false;
         }
+        else if (!inputIdno.matches("[A-Z]{1}[1-2]{1}[0-9]{8}")) {
+            return false;
+        }
         /*1.取得統號*/
         String idNumber = pidResidentFirstMap.get(inputIdno.substring(0,1))+inputIdno.substring(1,9);
         /*2.取得統一證號檢查碼*/
