@@ -38,7 +38,7 @@ public class CheckId {
         if(inputIdno.length()!=10){
             return false;
         }
-        else if (!inputIdno.matches("[A-Z]{1}[0-9]{1}[0-9]{8}")) {
+        else if (!inputIdno.matches("[A-Z]{1}[1-2|8-9]{1}[0-9]{8}")) {
             return false;
         }
         /*1.取得統號*/
