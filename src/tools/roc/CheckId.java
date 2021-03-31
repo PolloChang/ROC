@@ -38,7 +38,7 @@ public class CheckId {
         if(inputIdno.length()!=10){
             return false;
         }
-        else if (!inputIdno.matches("[A-Z]{1}[1-2]{1}[0-9]{8}")) {
+        else if (!inputIdno.matches("[A-Z]{1}[0-9]{1}[0-9]{8}")) {
             return false;
         }
         /*1.取得統號*/
@@ -119,7 +119,7 @@ public class CheckId {
             returnNumber +=countNumber;
         }
         /*10 - 計算出檢查碼*/
-        returnNumber = 10 - returnNumber%10;
+        returnNumber = (10 - returnNumber%10)%10;
         return returnNumber;
     }
 
